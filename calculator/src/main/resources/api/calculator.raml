@@ -1,0 +1,47 @@
+#%RAML 1.0
+title: calculator
+version: v1
+protocols: [http, https]
+traits:
+  var: !include traits/trait.raml
+/addition:
+  get:
+    is:
+      - var:  
+    responses:
+       200:
+         body:
+           application/json:
+             example: !include example/addition.json
+
+/subtraction:
+  get:
+    is:
+      - var:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include example/sub.json
+            
+/multiplication:
+  get:
+    is:
+      - var:
+    responses:
+     200:
+      body:
+        application/json:
+          example: !include example/mult.json
+
+/division:
+  get:
+    is:
+      - var:
+    responses:
+     200:
+      body:
+        application/json:
+          example: !include example/div.json
+              
+
